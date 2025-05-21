@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admission.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="icon" href="/myus/logo.jpg">
+<title>Admission</title>
+
+
+  </head>
+<body>
+
+<header>
+  <div class="nav-container">
+   <div class="logo">
+  <img src="/myus/logo.jpg" class="school-logo-img" alt="Test Image">
+</div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="/home/index.html">Home</a></li>
+
+  
+        <li class="dropdown-parent">
+  <a href="/myus/about.html" class="dropdown-arrow">About</a>
+  <div class="dropdown">
+   <a href="/myus/about.html">About Us</a>
+    <a href="/myus/gallary.html">Gallery</a>
+    <a href="/myus/career.html">Careers</a>
+  </div>
+
+<li>
+          <a href="#" class="dropdown-arrow">Admissions</a>
+          <div class="dropdown">
+            <a href="/admission/admission.html">Admission</a>
+            <a href="/admission/admissionpro.html">Admission Process</a>
+            <a href="/admission/admissionpolicy.html">Admission Policy</a>
+          </div>
+        </li>
+
+
+
+</li>
+        <li>
+          <a href="#" class="dropdown-arrow">Academics</a>
+          <div class="dropdown">
+            <a href="#">Academics</a>
+            <a href="#">Pre-School</a>
+            <a href="#">Primary School</a>
+            <a href="#">Junior High School</a>
+            <a href="#">Event Calendar</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#" class="dropdown-arrow">Student Zone</a>
+          <div class="dropdown">
+            <a href="#">School Events</a>
+            <a href="#">School Facilities</a>
+            <a href="#">School Clubs</a>
+          </div>
+        </li>
+
+        <li><a href="#">Contact</a></li>
+
+        <li><a href="/admission/admission.html" class="special-admission">Admission</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!--image section-->
+<section class="about-hero">
+  <div class="overlay">
+    <div class="about-content">
+      <h1>Admissions</h1>
+      <p><a href="/home/index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Admissions</span></p>
+    </div>
+  </div>
+</section>
+
+
+<!--admission section-->
+<section class="admission-section" id="admission">
+  <div class="container">
+    <h2 class="admission-title">Admission</h2>
+    <p class="admission-subtitle">
+      Complete our admission form below or download a copy of the admission form here.<br>
+      copy of the admission form here.
+    </p>
+    <p></p>
+    <div class="download-row">
+      
+      <a href="path-to-admission-form.pdf" class="download-btn" download>
+        <i class="fas fa-download"></i> Download Form
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!--admission forms-->
+<section class="admission-form-container">
+  <div class="school-header">
+    <img src="/myus/logo.jpg" alt="School Logo" class="school-logo">
+    <div class="school-info">
+      <h1>MINDFIELD SCHOOL OF EXCELLENCE</h1>
+      <p>P.O. BOX DT 226, DORMAA AHENKRO B/A</p>
+      <p><strong>TEL:</strong> 024-711-1111 / 027-697-6669</p>
+      <p><strong>NEAR KOTEI JHS, DORMAA AHENKRO</strong></p>
+    </div>
+  </div>
+
+  <h2 class="section-title">ADMISSION FORM</h2>
+
+  <form class="admission-form">
+    <!-- Admission Info -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>ADMISSION TO CLASS</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>TERM</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>ACADEMIC YEAR</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>APPLICATION NO.</label>
+        <input type="text" required>
+      </div>
+    </div>
+
+    <!-- Personal Details -->
+    <h3>PERSONAL DETAILS</h3>
+    <div class="form-group">
+      <label>FULL NAME OF STUDENT</label>
+      <input type="text" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>DATE OF BIRTH</label>
+        <input type="date" required>
+      </div>
+      <div class="form-group">
+        <label>GENDER</label>
+        <select required>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Citizenship -->
+    <h3>CITIZENSHIP DETAILS</h3>
+    <div class="form-group">
+      <label>COUNTRY</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>REGION OF RESIDENCE</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>NATIONALITY</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>RELIGION</label>
+      <input type="text" required>
+    </div>
+
+    <!-- Parent/Guardian -->
+    <h3>PARENT / GUARDIAN INFORMATION</h3>
+    <div class="form-group">
+      <label>NAME OF PARENT/GUARDIAN</label>
+      <input type="text" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>OCCUPATION</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>TEL</label>
+        <input type="text" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>RESIDENTIAL ADDRESS</label>
+      <input type="text" required>
+    </div>
+
+    <!-- Other Details -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>STUDENT LIVES WITH</label>
+        <select required>
+          <option>Both Parents</option>
+          <option>Mother</option>
+          <option>Father</option>
+          <option>Guardian</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>OTHER CHILDREN IN SCHOOL?</label>
+        <select required>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>NUMBER OF CHILDREN</label>
+        <input type="number" required>
+      </div>
+      <div class="form-group">
+        <label>CLASS</label>
+        <input type="text" required>
+      </div>
+    </div>
+
+    <!-- Emergency Call -->
+    <h3>EMERGENCY CALL IN PARENT'S ABSENCE</h3>
+    <div class="form-row">
+      <div class="form-group">
+        <label>NAME</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>RELATIONSHIP</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>TEL</label>
+        <input type="text" required>
+      </div>
+    </div>
+
+    <!-- Undertaking -->
+    <h3>LIABILITY / UNDERTAKING BY PARENT/GUARDIAN</h3>
+    <p class="undertaking">
+      I ................................................................. agree that the fees paid are not refundable,
+      and would strictly abide by the school rules and regulations. I also agree to sign the school’s PTA and would
+      settle the necessary financial obligations before the end of the academic term to avoid sanctions. Failure to
+      do so will attract strict consequences unless otherwise mutual agreement plan with the School Financial Department.
+    </p>
+
+    <!-- For Office Use -->
+    <h3>FOR OFFICE USE ONLY</h3>
+    <div class="form-group">
+      <label>DATE OF ADMISSION</label>
+      <input type="date" required>
+    </div>
+    <div class="form-group">
+      <label>ADMISSION NUMBER</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>AMOUNT PAID GHC</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>HEADMASTER</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>SIGNATURE / TEL</label>
+      <input type="text" required>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit">Submit</button>
+      <button type="button" onclick="window.print()">Download/Print Form</button>
+    </div>
+  </form>
+</section>
+
+
+
+
+<!--mail section-->
+<section class="mailing-section">
+  <div class="mailing-content">
+    <div class="mailing-left">
+      <h2>Join Our Mailing List</h2>
+      <p>For receiving our news and updates in your inbox directly.</p>
+    </div>
+    <div class="divider-line"></div>
+    <form class="mailing-form" onsubmit="return validateEmail(event)">
+      <input type="email" id="email" placeholder="Your Email Address" required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+
+<!--footer section-->
+<footer class="footer-section">
+  <div class="footer-container">
+    
+    <!-- Logo & About -->
+    <div class="footer-box about-box">
+      <img src="/myus/logo.jpg" alt="Mindfield Logo" class="footer-logo">
+      <p>In 2018, Mindfield School of Excellence was established. The desire of upgrading the school system in our community and providing a loving and conducive environment for learners was the primary drive to invest in a classic structured school… </p>
+    </div>
+
+    <!-- Get In Touch -->
+    <div class="footer-box">
+      <h4 class="footer-heading">Get In Touch</h4>
+      <p><strong>Location:</strong>  Dormaa - Ahenkro, Bono Region,Ghana<br>
+     
+      <p><strong>Phone:</strong> 0207119119/0548974000</p>
+      <p><strong>Email:</strong> info@mindfieldschoolofexcel</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Company (Home) -->
+    <div class="footer-box">
+      <h4 class="footer-heading">Contact Us</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>Monday - Friday : 8:00 AM - 7:00 PM</li>
+      </ul>
+    </div>
+
+    <!-- Information -->
+    <div class="footer-box">
+      <h4 class="footer-heading">Information</h4>
+      <ul>
+        <li><a href="#">Pre-School</a></li>
+        <li><a href="#">Primary School</a></li>
+        <li><a href="#">Junior High School</a></li>
+        <li><a href="#">Admission Process</a></li>
+        <li><a href="#">Admission Policy</a></li>
+        <li><a href="#">Event Calendar</a></li>
+      </ul>
+    </div>
+
+    <!-- Essentials -->
+    <div class="footer-box">
+      <h4 class="footer-heading">Essentials</h4>
+      <ul>
+        <li><a href="#">School Events</a></li>
+        <li><a href="#">School Facilities</a></li>
+        <li><a href="#">School Clubs</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Mindfield School Of Excellence. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+document.querySelector('.admission-form').addEventListener('submit', function(e) {
+  if (!this.checkValidity()) {
+    // If the form is invalid, the browser will show validation errors,
+    // so just return here to stop further action
+    return;
+  }
+
+  // Prevent the form from actually submitting to the server
+  e.preventDefault();
+
+  // Show success alert
+  alert('Form submitted successfully!');
+
+  // Clear/reset the form fields
+  this.reset();
+});
+
+
+//hamburger action
+const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('open');
+  });
+
+  // Dropdown toggle for mobile
+  const dropdownToggles = document.querySelectorAll('.dropdown-arrow');
+
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      const dropdown = this.nextElementSibling;
+
+      if (window.innerWidth <= 768 && dropdown && dropdown.classList.contains('dropdown')) {
+        e.preventDefault(); // Only prevent if dropdown exists
+
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('open');
+        });
+
+        // Toggle current dropdown
+        dropdown.classList.toggle('open');
+      }
+    });
+  });
+
+  // Close dropdowns if you click anywhere outside
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      const isDropdown = e.target.closest('.dropdown');
+      const isToggle = e.target.classList.contains('dropdown-arrow');
+
+      if (!isDropdown && !isToggle) {
+        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+      }
+    }
+  });
+
+
+
+
+  //admission
+  document.querySelectorAll('.download-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      console.log('Download started...');
+      // Optional smooth scroll to the form section if needed
+      const formSection = document.querySelector('#form');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+
+  //forms issue
+  document.getElementById('admissionForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  alert('Form submitted successfully!');
+
+  // Clear all input and select fields
+  const inputs = this.querySelectorAll('input');
+  const selects = this.querySelectorAll('select');
+
+  inputs.forEach(input => input.value = '');
+  selects.forEach(select => select.selectedIndex = 0);
+});
+
+function downloadForm() {
+  window.print();
+}
+
+//submit button
+function submitForm() {
+    // Show confirmation alert
+    alert("Form submitted successfully!");
+
+    // Clear all form fields
+    const form = document.querySelector('.admission-form');
+    form.reset(); 
+  }
+</script>

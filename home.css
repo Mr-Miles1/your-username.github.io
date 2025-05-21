@@ -1,0 +1,1337 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    
+     .school-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+  
+    
+   @media (max-width: 768px) {
+  .school-logo-img {
+    height: 20px;
+    border-radius: 20px;
+  }
+}
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #004080;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      z-index: 1000;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .dropdown a {
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+   .dropdown-arrow::after {
+  content: ' ▾';
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+    .special-admission {
+      background-color: #ffc107;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 3px 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .special-admission:hover {
+      background-color: #e0a800;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+
+    .hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hamburger div {
+  transition: all 0.3s ease;
+}
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        width: 100%;
+        background-color: #004080;
+        display: none;
+      }
+ header {
+    padding: 20px 15px; 
+  }
+      nav.active {
+        display: flex;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+      }
+
+      nav ul li {
+        width: 100%;
+      }
+
+      nav ul li a {
+        width: 100%;
+        padding: 12px 20px;
+      }
+
+      .dropdown {
+        position: static;
+        border-radius: 0;
+        width: 100%;
+      }
+
+      .special-admission {
+        margin-top: 10px;
+        align-self: flex-start;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+
+
+
+
+
+    /*image div*/
+    .slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: left 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slide.active {
+    left: 0;
+  }
+
+  .overlay {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0));
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .slide-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin-left: 5%;
+    color: white;
+  }
+
+  .slide h4 {
+    border: 2px solid white;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+     border-radius: 2px 12px;
+     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .slide h1 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+
+  .slide p {
+    font-size: 23px;
+    margin-bottom: 15px;
+    max-width: 500px;
+    
+  }
+
+  .slide button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .slide button:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+  .slider-container {
+    height: 80vh;
+  }
+
+  .slide {
+   background-size: cover; 
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .overlay {
+    .overlay {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0));
+  }
+}
+
+  .slide-content {
+    margin-left: 10px;
+    max-width: 90%;
+  }
+
+  .slide h1 {
+    font-size: 24px;
+  }
+
+  .slide p {
+    font-size: 16px;
+  }
+
+  .slide button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+
+
+
+  /*acheivement section*/
+   .stats-bar {
+    width: 100%;
+    background-color: #144083; /* Modern deep navy gradient */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 160px;
+    margin: 10px 0;
+  }
+
+  .stat-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #FFD700; /* Gold accent */
+  }
+
+  .stat-number {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .stat-label {
+    font-size: 25px;
+    margin-top: 3px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .stats-bar {
+      flex-direction: column;
+      padding: 30px 0;
+    }
+
+    .stat-item {
+      margin-bottom: 20px;
+    }
+  }
+
+
+/*statistics section*/
+.stats-section {
+  background: linear-gradient(145deg, #4caf50, #1b263b);
+  color: #fff;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.stat-box {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-8px);
+}
+
+.stat-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.counter {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.stat-box p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+
+
+
+  /*welcome section*/
+  .welcome-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    background: linear-gradient(to right, #f5faff, #d9e8f5);
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+  }
+
+  .welcome-left {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+  }
+
+  .welcome-left img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .welcome-caption {
+    margin-top: 15px;
+    padding: 12px 15px;
+    background-color: #2a5298;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .welcome-right {
+    flex: 1;
+    max-width: 55%;
+    padding-left: 40px;
+    
+  }
+
+  .welcome-right h2 {
+    font-size: 32px;
+    color: #102C57;
+    margin-bottom: 10px;
+  }
+
+  .welcome-right h4 {
+    font-size: 20px;
+    color: #406882;
+    margin-bottom: 20px;
+  }
+
+  .welcome-right p {
+    line-height: 1.7;
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+
+  .welcome-right .founder-name {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #2a5298;
+  }
+
+  .welcome-right .read-more-btn {
+    background-color: #2a5298;
+    color: white;
+    padding: 12px 24px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .welcome-right .read-more-btn:hover {
+    background-color: #1c3e7a;
+  }
+
+  @media (max-width: 768px) {
+    .welcome-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .welcome-left, .welcome-right {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .welcome-right {
+      padding-top: 30px;
+    }
+  }
+
+  @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*our goal section*/
+.our-goal-section {
+  padding: 80px 20px;
+ background: #f4efff url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.goal-header h2 {
+  font-size: 36px;
+  color: #4b2e83;
+  margin-bottom: 20px;
+}
+
+.goal-header p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Cards */
+.goal-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.goal-card {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+  text-align: left;
+}
+
+.goal-card .goal-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4b2e83;
+  margin-bottom: 10px;
+}
+
+.goal-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.goal-card a {
+  text-decoration: none;
+  color: #4b2e83;
+  font-weight: 600;
+  position: relative;
+}
+
+.goal-card a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #4b2e83;
+  transition: width 0.3s ease-in-out;
+  margin-top: 3px;
+}
+
+.goal-card a:hover::after {
+  width: 100%;
+}
+
+/* Reveal Animation Class */
+.goal-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Arrow Animation */
+.goal-card a .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.goal-card a:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Number Circle Styling */
+.goal-number {
+  width: 70px;
+  height: 70px;
+  background: #f3f1fc;
+  border: 2px solid #4b2e83;
+  border-radius: 50%;
+  color: #4b2e83;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+/* Glow & Tooltip on Hover */
+.goal-number:hover {
+  box-shadow: 0 0 20px #a58cff;
+  transform: scale(1.1);
+}
+
+.goal-number::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4b2e83;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.goal-number:hover::after {
+  opacity: 1;
+}
+
+
+
+/*sucess and growth section*/
+.success-growth-section {
+  background: linear-gradient(to right, #f5f2fa, #e9e0f6);
+  padding: 80px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.success-growth-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Left Content */
+.left-content {
+  flex: 1 1 45%;
+  padding: 20px;
+}
+
+.left-content h2 {
+  font-size: 2.7rem;
+  color: #4c258d;
+}
+
+.left-content h3 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #2e0c6a;
+}
+
+.left-content p {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  color: #444;
+}
+
+.contact-btn {
+  background: #6b3bbd;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(107, 59, 189, 0.3);
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #512b97;
+}
+
+/* FontAwesome icon */
+.contact-btn i {
+  font-size: 1.1rem;
+}
+
+/* Right Content */
+.right-content {
+  flex: 1 1 45%;
+  padding: 20px;
+}
+
+.stat-box {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.stat-box h4 {
+  font-size: 1.3rem;
+  color: #2e0c6a;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.stat-box span.stat {
+  font-weight: bold;
+  color: #6b3bbd;
+}
+
+/* Arrow line animation */
+.arrow-container {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.arrow-line {
+  height: 100%;
+  width: 0%;
+  background: #6b3bbd;
+  border-radius: 4px;
+  animation: moveArrow 2s ease-out forwards;
+}
+
+@keyframes moveArrow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+/* school-curriculum.css */
+
+#school-curriculum {
+  position: relative; /* make it a positioning context for overlay */
+  background-color: #2e7d32; /* nice green fallback */
+  background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  overflow: hidden; 
+}
+
+/* Add blue overlay */
+#school-curriculum::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(0, 0, 255, 0.3); 
+  pointer-events: none; 
+  z-index: 0;
+}
+
+/* Make sure container is above overlay */
+#school-curriculum .container {
+  position: relative;
+  z-index: 1; 
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 30px 40px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+}
+
+/* Headings and text */
+#school-curriculum h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3em;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #1b5e20;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #4caf50;
+}
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Card styles */
+.card {
+  background-color: rgba(255 255 255 / 0.1);
+  border-radius: 10px;
+  width: 280px;
+  text-decoration: none;
+  color: rgb(225, 0, 0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+/* Image container with arrow button centered */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid rgba(255 255 255 / 0.3);
+}
+
+/* Background images by card type */
+.card.preschool .image-container {
+  background-image: url('nusery.jpg');
+}
+
+.card.primaryschool .image-container {
+  background-image: url('p1.jpg');
+}
+
+.card.juniorhigh .image-container {
+  background-image: url('jhs.jpg');
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 128, 0, 0.85); 
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.arrow-btn:hover {
+  background-color: #81c784; 
+}
+
+/* Card text */
+.card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 940px) {
+  .cards-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+#school-curriculum .container {
+  position: relative; /* make it a positioning context */
+  z-index: 1; /* text above the overlay */
+  background: rgba(255, 255, 255, 0.15); /* light translucent background for contrast */
+  border-radius: 15px;
+  padding: 30px 40px;
+}
+
+#school-curriculum .container::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  backdrop-filter: blur(15px); /* stronger blur */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1); /* slight white overlay */
+  z-index: -1; /* behind text */
+}
+
+
+/*our process*/
+#admission-process {
+  background: #f3f6fb;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#admission-process h2 {
+  font-size: 2.8rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+#admission-process .subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.steps-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.step-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.step-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background-color: #2e7d32;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card h3 {
+  color: #1b5e20;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.step-card h4 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #4caf50;
+}
+
+
+/*testimonials section*/
+#testimonials {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2e7d32;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.testimonial-card {
+  background-color: #f3f6fb;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.testimonial-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background-color: #2e7d32;
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-card .quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  font-weight: bold;
+  color: #1b5e20;
+  font-size: 1rem;
+}
+
+.testimonial-card {
+  background-color: #f3f6fb;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  cursor: pointer;
+}
+
+.testimonial-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOVER EFFECT */
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  background-color: #eaf4ff;
+  box-shadow: 0 12px 25px rgba(46, 125, 50, 0.2);
+}
+
+
+
+/*mail section*/
+.mailing-section {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  padding: 60px 30px;
+}
+
+.mailing-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.mailing-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.mailing-left h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.mailing-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.divider-line {
+  width: 2px;
+  height: 100px;
+  background-color: white;
+}
+
+.mailing-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 250px;
+}
+
+.mailing-form input[type="email"] {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.mailing-form button {
+  padding: 12px 25px;
+  background-color: white;
+  color: #2e7d32;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mailing-form button:hover {
+  background-color: #c8e6c9;
+}
+
+@media (max-width: 768px) {
+  .mailing-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .divider-line {
+    height: 2px;
+    width: 80px;
+  }
+
+  .mailing-form {
+    justify-content: center;
+  }
+}
+
+
+/*footer section*/
+.footer-section {
+  background-color: #0f1a23;
+  color: #f0f0f0;
+  padding: 60px 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 26px;
+  max-width: 2000px;
+  margin: auto;
+}
+
+.footer-box h4.footer-heading {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #4caf50;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+  color: #4caf50;
+}
+
+.footer-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4caf50;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .footer-section {
+    text-align: center;
+  }
+  .footer-box h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
